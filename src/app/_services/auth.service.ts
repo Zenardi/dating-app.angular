@@ -30,7 +30,7 @@ export class AuthService {
     return this.http.post(this.baseUrl + 'login', model)
     .pipe(
       map((response: any) => {
-        console.log("response: " +response);
+        // console.log("response: " +response);
         const user = response;
         if(user){
           localStorage.setItem('token', user.token);
@@ -43,8 +43,8 @@ export class AuthService {
     )
   }
 
-  register(model: any){
-    return this.http.post(this.baseUrl + 'register', model);
+  register(user: User){
+    return this.http.post(this.baseUrl + 'register', user);
   }
 
   loggedIn(){

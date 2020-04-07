@@ -21,6 +21,7 @@
     "@angular/router": "~7.2.15",
     "@auth0/angular-jwt": "^4.0.0",
     "alertifyjs": "^1.13.1",
+    "aws-sdk": "^2.654.0",
     "bootstrap": "^4.4.1",
     "bootswatch": "^4.1.1",
     "font-awesome": "^4.7.0",

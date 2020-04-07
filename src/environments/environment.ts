@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000/api/'
+  apiUrl: 'http://localhost:5000/api/',
+  bucketName: 'zen.datingapp-angularcore',
+  bucketRegion: 'us-west-2',
+  identityPoolId: ''
 };
 
 /*
