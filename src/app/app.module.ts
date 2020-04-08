@@ -11,6 +11,9 @@ import { NgxGalleryModule } from 'ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 //import { TimeAgoPipe } from 'time-ago-pipe';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,6 +62,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     MessagesComponent,
     MemberCardComponent,
     MemberDetailComponent,
+    
     MemberEditComponent,
     PhotoEditorComponent//,
     ///TODO Fix: No Pipe decorator found on TimeAgoPipe
@@ -69,7 +73,9 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ButtonsModule.forRoot(),
     BrowserAnimationsModule,
+    PaginationModule.forRoot(),
     ReactiveFormsModule,
     NgxGalleryModule,
     BsDatepickerModule.forRoot(),
