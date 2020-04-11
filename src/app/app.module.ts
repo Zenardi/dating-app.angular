@@ -37,6 +37,8 @@ import { UserService } from './_services/user.service';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 
 
@@ -65,7 +67,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     MemberDetailComponent,
     
     MemberEditComponent,
-    PhotoEditorComponent//,
+    PhotoEditorComponent,
+    MemberMessagesComponent//,
     ///TODO Fix: No Pipe decorator found on TimeAgoPipe
     // TimeAgoPipe
   ],
@@ -102,6 +105,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
               MemberListResolver,
               MemberEditResolver,
               ListsResolver,
+              MessagesResolver,
               { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
             ],
   bootstrap: [AppComponent]
