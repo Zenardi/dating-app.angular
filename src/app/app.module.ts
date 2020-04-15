@@ -13,6 +13,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 //import { TimeAgoPipe } from 'time-ago-pipe';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +49,7 @@ import { RolesModalComponent } from './admin/roles-modal/roles-modal.component';
 
 
 
+
 export function tokenGetter() {
   return localStorage.getItem('token');
 }
@@ -70,6 +72,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     ListsComponent,
     MessagesComponent,
     MemberCardComponent,
+    RolesModalComponent,
     MemberDetailComponent,
     HasRoleDirective,
     AdminPanelComponent,
@@ -77,7 +80,6 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     PhotoManagementComponent,
     UserManagementComponent,
     PhotoEditorComponent,
-    RolesModalComponent,
     MemberMessagesComponent//,
     ///TODO Fix: No Pipe decorator found on TimeAgoPipe
     // TimeAgoPipe
@@ -94,6 +96,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     NgxGalleryModule,
     // BsDatepickerModule.forRoot(),
     TabsModule.forRoot(),
+    ModalModule.forRoot(),
     FileUploadModule,
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
@@ -118,6 +121,9 @@ export class CustomHammerConfig extends HammerGestureConfig  {
               MessagesResolver,
               AdminService,
               { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
+            ],
+            entryComponents: [
+              RolesModalComponent
             ],
   bootstrap: [AppComponent]
 })
